@@ -1,0 +1,38 @@
+/* reset styles */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* HEADER */
+.header {
+  background-color: black;
+  display: flex;
+  /*flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+}
+.list {
+  /*padding: 0;*/
+  display: flex;
+  list-style-type: none;
+  /*justify-content: space-between;*/
+}
+.link {
+  text-decoration: none;
+  padding: 0px 10px 0px 10px;
+  color: white;
+}
+.link:hover {
+  color: violet;
+}
+.list-item {
+  margin-left: 5px;
+}
+
+/* MAIN */
+
+/* FOOTER */ ;
