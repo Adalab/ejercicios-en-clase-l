@@ -1,0 +1,79 @@
+/* reset styles */
+
+* {
+  box-sizing: border-box;
+  font-family: Circular, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff2")
+      format("woff2"),
+    url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff2")
+      format("woff2"),
+    url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* header */
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  z-index: 1;
+}
+
+.logo {
+  height: 30px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.link {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+.link-signup {
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
+/* MAIN */
+.main {
+  /*margin-top: 60px;*/
+  position: relative;
+  top: 60px;
+}
