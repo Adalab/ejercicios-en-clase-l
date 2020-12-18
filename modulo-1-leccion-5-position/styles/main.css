@@ -1,0 +1,29 @@
+.section {
+  position: relative;
+  width: 400px;
+  display: flex;
+  background-color: grey;
+  margin-left: 150px;
+  top: 500px;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  margin: 5px;
+}
+
+.relative {
+  position: relative;
+  top: 100px;
+}
+.relative:hover {
+  transition: all 2s;
+  transform: scale(0.5) rotate(45deg);
+  background-color: pink;
+}
+.absolute {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
