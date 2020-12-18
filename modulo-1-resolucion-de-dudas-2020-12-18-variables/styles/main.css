@@ -1,0 +1,23 @@
+/* definición de variables */
+
+:root {
+  --brand-color: orange;
+  --default-padding: 10px;
+}
+
+/* uso */
+
+* {
+  background: var(--brand-color);
+}
+
+.header {
+  padding: var(--default-padding);
+  color: var(--brand-color);
+  /* color: orange */
+  background: red;
+}
+
+.title {
+  background-color: green;
+}

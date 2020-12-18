@@ -1,0 +1,28 @@
+.page {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.header {
+  background: red;
+}
+.aside-left {
+  width: 25%;
+  background: yellow;
+}
+.main {
+  width: 50%;
+  background: blue;
+}
+.aside-right {
+  width: 25%;
+  background: pink;
+}
+.footer {
+  background: green;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
