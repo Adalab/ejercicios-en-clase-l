@@ -1,0 +1,112 @@
+/* fonts */
+
+@font-face {
+  font-family: Circular;
+  src: url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff2")
+      format("woff2"),
+    url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff2")
+      format("woff2"),
+    url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* reset styles */
+
+* {
+  box-sizing: border-box;
+  font-family: Circular, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+/* html */
+
+.size-m {
+  font-size: 16px;
+}
+
+.size-xl {
+  font-size: 32px;
+}
+
+/* header */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+}
+
+.logo {
+  height: 30px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.link {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.link-signup:before {
+  padding-left: 4px;
+  content: "|";
+  color: white;
+}
+
+/* main */
+
+.main {
+  margin-top: 57px; /* esto es lo que mide el haeader */
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* MEDIA */
+
+@media all and (min-width: 768px) {
+  .benefits {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .benefit {
+    width: 50%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .benefits {
+    flex-wrap: nowrap;
+  }
+}
