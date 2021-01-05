@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+
+  &__logo {
+    height: 30px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    &__link {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+
+      &:hover {
+        color: #4bb84a;
+      }
+    }
+
+    &__item--signup:before {
+      padding-left: 4px;
+      content: '|';
+      color: white;
+    }
+  }
+}

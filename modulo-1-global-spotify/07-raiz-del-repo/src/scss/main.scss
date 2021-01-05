@@ -1,0 +1,199 @@
+@import './layout/header';
+
+/* fonts */
+@font-face {
+  font-family: Circular;
+  src: url('https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff2')
+      format('woff2'),
+    url('https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff')
+      format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url('https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff2')
+      format('woff2'),
+    url('https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff')
+      format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* reset styles */
+
+* {
+  box-sizing: border-box;
+  font-family: Circular, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+/* main */
+
+.main {
+  margin-top: 60px; /* esto es lo que mide el header */
+}
+
+/* hero area */
+
+.hero {
+  padding: 60px 30px 30px 30px;
+  background-color: #0691ff;
+  color: white;
+}
+
+.hero-title {
+  max-width: 600px;
+  font-size: 3rem;
+  line-height: 55px;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.hero-plans {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 5px 25px;
+  border-radius: 50px;
+  background-color: #4bb84a;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero-policy {
+  display: block;
+  margin-top: 30px;
+  font-size: 10px;
+}
+
+/* benefits area */
+
+.benefits-title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+/* benefit item */
+
+.benefit {
+  display: flex;
+  align-items: left;
+  padding: 10px;
+}
+
+.benefit-img {
+  margin: 15px;
+  width: 100px;
+}
+
+.benefit-title {
+  font-size: 1.25rem;
+  line-height: 25px;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+  background-color: black;
+}
+
+.footer,
+.footer * {
+  font-size: 10px;
+  color: #999;
+}
+
+.footer-menu-links:hover {
+  color: white;
+}
+
+.footer-menu-items {
+  display: inline-block;
+}
+
+.footer-menu-links {
+  display: inline-block;
+  padding: 7px;
+}
+
+/* copy */
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.copy-year {
+  margin-top: 5px;
+}
+
+.copy-spain-flag {
+  margin-left: 5px;
+  height: 15px;
+  vertical-align: text-bottom;
+}
+
+/* media queries */
+
+@media all and (min-width: 768px) {
+  .hero {
+    background-image: url(../images/premium-dancer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+
+  .benefits {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+  }
+
+  .benefit {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .benefits {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 1000px;
+  }
+
+  .benefit {
+    display: block;
+  }
+}
