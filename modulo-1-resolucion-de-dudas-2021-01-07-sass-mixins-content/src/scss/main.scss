@@ -1,0 +1,18 @@
+@mixin title() {
+  color: green;
+  font-size: 18px;
+  @content;
+}
+
+.about-us {
+  @include title() {
+    font-size: 28px;
+    padding: 10px;
+  }
+}
+
+.team {
+  @include title() {
+    margin: 10px;
+  }
+}
