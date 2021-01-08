@@ -1,0 +1,11 @@
+.menu {
+  background-color: green;
+
+  .header & {
+    background-color: red;
+  }
+
+  .footer & {
+    background-color: blue;
+  }
+}

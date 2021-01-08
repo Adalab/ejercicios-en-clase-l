@@ -1,0 +1,8 @@
+.menu {
+  background-color: green; }
+  .header .menu {
+    background-color: red; }
+  .footer .menu {
+    background-color: blue; }
+
+/*# sourceMappingURL=main.css.map */
