@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: pink;
+}
+
+.menu {
+  background-color: purple;
+}
+
+.content {
+  background-color: red;
+}
+
+.footer {
+  background-color: blue;
+}
+
+.btn-adalab {
+  background-color: black;
+}
