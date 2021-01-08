@@ -1,0 +1,63 @@
+<section class="newsletter">
+  <form action="https://adalab.es/newsletter" class="newsletter__form" method="POST">
+    <h3 class="newsletter__title">Subscríbete a nuestra newsletter</h3>
+    <div>
+      <label class="newsletter__label" for="name">Tu nombre</label>
+      <input
+        class="newsletter__input-text"
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Escribe tu nombre"
+      />
+    </div>
+
+    <div>
+      <label class="newsletter__label" for="password">Tu contraseña</label>
+      <input
+        class="newsletter__input-text"
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe tu contraseña"
+      />
+    </div>
+
+    <div>
+      <label class="newsletter__label" for="newsletter__email">Tu email</label>
+      <input
+        class="newsletter__input-text"
+        type="text"
+        name="email"
+        placeholder="example@gmail.com"
+        pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$."
+        required
+      />
+    </div>
+
+    <div>
+      <label for="">dfecha de nacimiento</label>
+      <select name="diaNac" id="">
+        <option value="">Dia</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <div>
+      <label for="">
+        <input type="radio" value="1" name="gif"> Calcetines
+        <input type="radio" value="2" name="gif"> Tortilla
+        <input type="radio" value="3" name="gif"> Croquetas
+      </label>
+    </div>
+    <div>
+      <label for="">
+        <input type="checkbox" value="acepta" name="term"> 
+        Acepta terminos y condiciones
+      </label>
+    </div>
+    <input type="submit" class="newsletter__button" value="Subscríbete ahora" />
+  </form>
+</section>

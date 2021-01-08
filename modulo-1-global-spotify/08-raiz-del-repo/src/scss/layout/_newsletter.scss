@@ -1,0 +1,41 @@
+.newsletter {
+  background-color: #0691ff;
+  color: white;
+
+  &__form {
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 700px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 25px;
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 10px 10px 10px 0;
+    width: 100px;
+  }
+
+  &__input-text {
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  &__button {
+    margin-top: 10px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    border: none;
+    background-color: #4bb84a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: white;
+  }
+}
