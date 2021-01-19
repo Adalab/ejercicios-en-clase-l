@@ -1,0 +1,18 @@
+
+
+Pasos para hacer un huevo frito:
+
+1. let sarten = Coger una sartén ¿Qué sartén?
+2. Coger los ingredientes
+3. Encender
+4. Echar aceite a la sartén
+5. fuego.poner( sarten )
+6. Cuando el aceite esté calente:
+  7. Cascar el huevo
+  8. Darle con la pala
+  9. Echarle sal
+10. Cuando esté al punto
+  11. Escurrirlo
+  12. Echarlo al plato
+
+FIN

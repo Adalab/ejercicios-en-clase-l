@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="http://beta.adalab.es/resources/stylesheets/all.css" />
+  </head>
+
+  <body class="page">
+    <h1 class="title--big">Calculadora</h1>
+
+    <form>
+      <label class="form__label" for="numberA">Primer número</label>
+      <input type="number" name="numberA" id="numberA" class="js-number-a form__input-text display-block" />
+
+      <label class="form__label" for="numberB">Segundo número</label>
+      <input type="number" name="numberB" id="numberB" class="js-number-b form__input-text display-block" />
+
+      <label class="p-0 display-block mb-1">
+        Resultado:
+        <span class="js-result text--bold"></span>
+      </label>
+      <input type="button" class="js-reset form__btn m-0" value="Reset" />
+    </form>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
