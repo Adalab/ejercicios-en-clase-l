@@ -1,0 +1,11 @@
+.fill-photo {
+  display: flex;
+
+  &__preview {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid 1px #ccc;
+    width: 28px;
+    height: 28px;
+  }
+}
