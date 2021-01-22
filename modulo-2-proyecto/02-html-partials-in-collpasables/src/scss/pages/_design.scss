@@ -1,0 +1,55 @@
+.design__square {
+  &-label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-radio {
+    margin-right: 8px;
+  }
+
+  &-color {
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    overflow: hidden;
+    color: rgba($color: white, $alpha: 0);
+  }
+}
+
+.palette-1 {
+  .color-1 {
+    background-color: #114e4e;
+  }
+  .color-2 {
+    background-color: #438792;
+  }
+  .color-3 {
+    background-color: #a2deaf;
+  }
+}
+
+.palette-2 {
+  .color-1 {
+    background-color: #420101;
+  }
+  .color-2 {
+    background-color: #bd1010;
+  }
+  .color-3 {
+    background-color: #e95626;
+  }
+}
+
+.palette-3 {
+  .color-1 {
+    background-color: #3e5b65;
+  }
+  .color-2 {
+    background-color: #eab052;
+  }
+  .color-3 {
+    background-color: #a0c0cf;
+  }
+}
