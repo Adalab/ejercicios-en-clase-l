@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio Funciones: Nombre completo</title>
+    <link rel="stylesheet" href="http://beta.adalab.es/resources/stylesheets/all.css" />
+    <link rel="stylesheet" href="./stylesheet/main.css" />
+  </head>
+
+  <body class="page darkmode">
+    <header class="header">
+      <h1 class="title--big">Componiendo nombre</h1>
+      <a
+        class="header--logo"
+        href="https://github.com/Adalab/ejercicios-en-clase-k/"
+        title="Ir al repo del ejercicio"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="https://raw.githubusercontent.com/Adalab/resources/master/images/adalab-logo-32x32.png"
+          alt="Adalab logo"
+        />
+      </a>
+    </header>
+
+    <form>
+      <label class="form__label" for="firstname">Nombre:</label>
+      <input
+        type="text"
+        name="firstname"
+        id="firstname"
+        class="js-firstname form__input-text display-block"
+        value="Dayana"
+      />
+
+      <label class="form__label" for="lastname">Apellidos:</label>
+      <input
+        type="text"
+        name="lastname"
+        id="lastname"
+        class="js-lastname form__input-text display-block"
+        value="Romero"
+      />
+
+      <p class="mt-1 pb-1 mb-1">...otros campos...</p>
+
+      <h2 class="title--medium mb-1">Antes de enviar el formulario</h2>
+
+      <p class="mb-1">Comprueba bien los siguientes datos:</p>
+
+      <label class="p-0 pl-1 display-block mb-1">
+        Nombre completo:
+        <span class="js-result text--bold"></span>
+      </label>
+      <input type="submit" title="Enviar el registro" value="Enviar" />
+    </form>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
