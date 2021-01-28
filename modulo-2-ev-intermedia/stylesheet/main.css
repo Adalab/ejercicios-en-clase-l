@@ -1,0 +1,23 @@
+:root {
+  --text-color: #54585a;
+  --light-color: #fdfdfd;
+  --blue: #14d9c4;
+  --darkblue: #099d8d;
+  --gray: #dddddd;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.main {
+  width: min( 40vw , 500px );
+  margin: 1em auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

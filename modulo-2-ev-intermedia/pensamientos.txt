@@ -1,0 +1,14 @@
+Proceso 1: pistas
+
+Data:
+  - Número usuaria
+  - Número aleatorio
+
+Cuando:
+  - Click botón
+
+Resultado:
+  - Mensj. usuaria.
+
+
+Proceso 2: contador
