@@ -6,7 +6,19 @@
 
   &__title {
     padding-left: 10px;
-    border-left: 8px solid #14d9c4;
+    border-left: 8px solid;
+  }
+
+  &.palette-1 .card__title {
+    border-left-color: #14d9c4;
+  }
+
+  &.palette-2 .card__title {
+    border-left-color: #bd1010;
+  }
+
+  &.palette-3 .card__title {
+    border-left-color: #3e5b65;
   }
 
   &__img {
