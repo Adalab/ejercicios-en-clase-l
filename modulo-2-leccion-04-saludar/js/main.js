@@ -17,7 +17,7 @@ function saludar(nombre, ancho, alto) {
   // Variables hora y htmlSaludo son locales
   const hora = obtenerHora();
 
-  const htmlSaludo = '<article class="kitten">';
+  let htmlSaludo = '<article class="kitten">';
 
   if (hora < 12) {
     htmlSaludo += `  <div>Buenos días ${nombre}!</div>`;
