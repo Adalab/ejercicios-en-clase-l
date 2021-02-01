@@ -1,0 +1,92 @@
+:root {
+  --background: #1e1e1e;
+  --textcolor: #dddddd;
+  --blue: #14d9c4;
+  --darkblue: #099d8d;
+  --orange: #d96314;
+  --almostwhite: #aeaeae;
+  --monospace: "Inconsolata", monospace;
+}
+
+.table {
+  padding: 200px 20px;
+}
+
+.page.darkmode {
+  background-color: var(--background);
+}
+
+.darkmode * {
+  font-size: 18px;
+  color: var(--textcolor);
+}
+
+.darkmode .header {
+  position: relative;
+}
+
+.darkmode .header .header--logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+.darkmode .title--big {
+  font-size: 36px;
+  color: var(--blue);
+  width: 50vw;
+  margin-bottom: 2em;
+  border-bottom: dotted 1px var(--darkblue);
+}
+
+@media all and (max-width: 996px) {
+  .darkmode .title--big {
+    width: 100%;
+  }
+}
+
+.darkmode input {
+  background-color: var(--background);
+  color: var(--darkblue);
+  border: dotted 1px var(--darkblue);
+  border-radius: 5px;
+}
+
+
+.darkmode input:focus {
+  background-color: var(--background);
+  color: var(--blue);
+  border: solid 1px var(--blue);
+}
+
+.darkmode input[type=submit] {
+  background-color: var(--background);
+  color: var(--blue);
+  border: solid 1px var(--blue);
+  cursor:pointer;
+}
+
+.darkmode .table {
+  border-top: none;
+}
+
+.darkmode .table thead tr th {
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.darkmode .table tr td {
+  font-size: 18px;
+}
+
+.darkmode .table tr:hover td {
+  background-color: #023833;
+}
+
+/*
+  EXERCISE 4: Class to cross out the completed tasks
+*/ 
+
+.crossout {
+  text-decoration:line-through;
+}
