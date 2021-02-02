@@ -1,0 +1,46 @@
+.collapsable {
+  // header
+
+  &__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__icon {
+    font-size: 20px;
+
+    &--left {
+      margin-right: 10px;
+    }
+    &--right {
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  // content
+
+  .collapsable__content {
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+}
+
+.collapsable--close {
+  .collapsable__icon--right {
+    transform: rotate(180deg);
+  }
+
+  .collapsable__content {
+    max-height: 0;
+  }
+}
