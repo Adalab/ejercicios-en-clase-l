@@ -75,9 +75,16 @@ function listenDeleteButtons() {
 }
 
 function handleDelete(ev) {
+  // el botón escuchado está en ev.currentTarget
+  // cada botón escuchado tiene un id="0", id="1", id="2"...
+  // guardo en clickeIndex el id del botón clickado
   const clickedIndex = parseInt(ev.currentTarget.id);
   console.log('currentTarget', ev.currentTarget.id, clickedIndex);
+  // el id coincide con el índice: el botón con id="0" es el primer elemento del array userFilms, el botón con el id="1" es el segundo elemento de userFilms
+  // para borrar un elemento d userMovies, necesito pasar a splice la posición del elemento a borrar
+  // por ello clickedIndex es la posición del elemento a borrar
   userMovies.splice(clickedIndex, 1);
+  // después de borrar, repinto y vuelvo a escuchar los eventos
   paintData();
 }
 
