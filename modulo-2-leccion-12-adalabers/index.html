@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>2.12 DOM avanzado</title>
+  <link rel="stylesheet" href="http://beta.adalab.es/resources/stylesheets/all.css" />
+  <link rel="stylesheet" href="./stylesheet/main.css" />
+</head>
+
+<body class="page darkmode">
+  <header class="header">
+    <h1 class="title--big">2.12 DOM avanzado: Lista Adalabers</h1>
+    <a class="header--logo" href="https://github.com/Adalab/ejercicios-en-clase-k/" title="Ir al repo del ejercicio"
+       target="_blank" rel="noreferrer">
+      <img src="https://raw.githubusercontent.com/Adalab/resources/master/images/adalab-logo-32x32.png"
+           alt="Adalab logo" />
+    </a>
+  </header>
+
+  <main>
+    <h2 class="js-greeting">Listado de Adalabers</h2>
+    <section class="main">
+      <div class="js-list div divAdalabers">
+
+        <!-- Aqui voy a escribir mi lista desde JS -->
+
+      </div>
+      <form class="js-newAdalaber form hidden" action="">
+          <h3>Editar Adalaber</h3>
+          <input class="js-newName newAdalaber__inputText newAdalaber__name" type="text" name="name" id="name" placeholder="Nombre"/>
+          <input class="js-newGithub newAdalaber__inputText newAdalaber__github" type="text" name="name" id="name" placeholder="GitHub" />
+          <input class="js-newTeam newAdalaber__inputText newAdalaber__team" type="text" name="name" id="name" placeholder="Equipo" />
+          <input class="js-save" type="button" value="Guardar" />
+      </form>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
