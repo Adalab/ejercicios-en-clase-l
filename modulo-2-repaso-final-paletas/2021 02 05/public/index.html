@@ -15,22 +15,23 @@
 
     <main>
       <div class="filter">
-        <form>
+        <form class="js-form">
           <label class="filter__label" for="filter">Filtrar por nombre de paleta:</label>
           <input
             class="filter__input js-filter"
             type="text"
             id="filter"
-            placeholder="Escribe aquí el nombre de tu paleta"
+            placeholder="Escribe aquí el nombre de la paleta"
           />
         </form>
       </div>
 
-      <main class="palettes">
+      <div class="palettes">
         <h2>Listado de paletas:</h2>
         <ul class="palettes__list js-palettes-container">
           <!-- Aquí empieza el código que vamos a generar desde JS -->
-          <li class="palette">
+          <!--
+            <li class="palette">
             <h2 class="palette__title">Tardis Blue</h2>
             <div class="palette__colors">
               <div class="palette__color" style="background-color: #003a6e"></div>
@@ -38,8 +39,7 @@
               <div class="palette__color" style="background-color: #000000"></div>
               <div class="palette__color" style="background-color: #ffffff"></div>
               <div class="palette__color" style="background-color: #6f4500"></div>
-            </div>
-          </li>
+            </div></li>
           <li class="palette">
             <h2 class="palette__title">Millenium Falcon</h2>
             <div class="palette__colors">
@@ -79,20 +79,17 @@
               <div class="palette__color" style="background-color: #464f75"></div>
               <div class="palette__color" style="background-color: #9abef2"></div>
             </div>
-          </li>
+          </li> -->
           <!-- Aquí acaba el código que vamos a generar desde JS -->
         </ul>
-      </main>
+      </div>
 
     </main>
     <footer class="footer">
-      <small>
-        <a
-          href="//github.com/Adalab/ejercicios-extra/tree/master/js-ejercicio-de-paletas"
-          target="_blank"
-          >Enunciado del ejercicio</a
-        >
-      </small>
+      <a href="//github.com/Adalab/ejercicios-extra/tree/master/js-ejercicio-de-paletas" target="_blank"
+        >Enunciado del ejercicio</a
+      >
+      <a href="./assets/images/flow-diagram.svg" target="_blank">Diagrama de flujo</a>
     </footer>
 
     <script src="./assets/js/main.js"></script>

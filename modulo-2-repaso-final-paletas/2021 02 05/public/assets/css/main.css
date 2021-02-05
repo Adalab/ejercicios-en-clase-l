@@ -56,6 +56,10 @@
 
 .footer {
   padding: 1rem;
-  background-color: #eee; }
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between; }
+  .footer * {
+    font-size: 0.8rem; }
 
 /*# sourceMappingURL=main.css.map */
