@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import './stylesheets/index.css';
+import './stylesheets/index.scss';
 
+// esto es común para componentes de clase y funcionales
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.querySelector('#root')
 );
