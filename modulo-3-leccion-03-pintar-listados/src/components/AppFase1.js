@@ -60,7 +60,8 @@ class App extends React.Component {
       <div>
         <h1>Pintar listados con React:</h1>
         {/* array de etiquetas JSX */}
-        {result}
+        {/* en la explicación grabada en clase se me había olvidado que los li tienen que estar dentro de un ul, por eso pongo aquí el ul */}
+        <ul>{result}</ul>
       </div>
     );
 
