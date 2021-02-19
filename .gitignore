@@ -38,6 +38,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dependency directories
+package-lock.json
 node_modules/
 
 # Sass
