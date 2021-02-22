@@ -31,8 +31,8 @@ function add(...numbers) {
   return total;
 }
 
-// console.log(add(1, 2));
-// console.log(add(1, 2, 3, 4));
+console.log(add(1, 2));
+console.log(add(1, 2, 3, 4));
 
 // Ejemplo 2:
 
@@ -47,8 +47,8 @@ function addWithInitialValue(initialValue, ...numbers) {
   return total;
 }
 
-// console.log(addWithInitialValue(100, 1, 2));
-// console.log(addWithInitialValue(100, 1, 2, 3, 4));
+console.log(addWithInitialValue(100, 1, 2));
+console.log(addWithInitialValue(100, 1, 2, 3, 4));
 
 // Ejemplo 3
 
