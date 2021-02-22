@@ -1,0 +1,23 @@
+.collapsable-container {
+  margin-bottom: 25px;
+  padding: 5px;
+  border: solid 3px #666;
+  background-color: #eee;
+}
+
+.collapsable-header {
+  cursor: pointer;
+  padding: 5px;
+  border: solid 3px #14d9c4;
+}
+
+.collapsable-content {
+  margin-top: 5px;
+  padding: 5px;
+  border: solid 3px #14d9c4;
+  display: none;
+}
+
+.collapsable-container.open .collapsable-content {
+  display: block;
+}
