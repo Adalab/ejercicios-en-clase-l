@@ -12,8 +12,8 @@ class App extends React.Component {
     return (
       <div>
         <h1>Aprendiendo Spread:</h1>
-        <SpradArray />
-        <SpradObject />
+        {/* <SpradObject /> */}
+        {/* <SpradArray /> */}
         <SpradParams />
       </div>
     );

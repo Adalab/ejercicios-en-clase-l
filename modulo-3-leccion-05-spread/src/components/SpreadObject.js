@@ -42,6 +42,7 @@ class SpreadObject extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="border--medium">
         <h2>Spread con objetos</h2>
@@ -122,7 +123,7 @@ const data3 = {
 //   email: '',
 //   name: '',
 //   password: ''
-// }
+// };
 // Es decir, es como si hubiese escrito a mano
 // const data3 = {
 //   email: user.email,
