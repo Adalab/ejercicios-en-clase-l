@@ -14,7 +14,15 @@ class Form extends React.Component {
 
   handleInput(ev) {
     // forma mejor de subir los datos por lifting
-    this.props.handleInput(ev.target.name, ev.target.value);
+    this.props.handleInput(ev.target.id, ev.target.value);
+
+    // aquí puedo subir los datos que me de la gana, podría hacer
+    // this.props.handleInput({
+    //   key: ev.target.id,
+    //   value: ev.target.value
+    // });
+    // aquí estaría subiendo un solo argumento, que es un objeto, que tiene dos propiedades: key y value
+    // si hago esto en el método handleInput de App.js tendría que esperar un solo parámetro de tipo objeto
   }
 
   render() {

@@ -12,12 +12,15 @@ class App extends React.Component {
 
   handleButton() {
     // this.state siempre recibe un objeto
-    this.setState(prevState => {
-      console.log('Es estado previo es', prevState);
+    // esta es la forma buena
+    // le paso una función a React y él la ejecuta cuando el estado está actualizado y listo
+    this.setState(function (estadoPrevio) {
+      console.log('Es estado previo es', estadoPrevio);
       return {
-        counter: prevState.counter + 1
+        counter: estadoPrevio.counter + 1
       };
     });
+    // esta es la forma mala, se que el estado depende de sí mismo porque estoy calculando el nuevo valor de counter a partir de this.state.counter
     // this.setState({ counter: this.state.counter + 1 });
   }
 

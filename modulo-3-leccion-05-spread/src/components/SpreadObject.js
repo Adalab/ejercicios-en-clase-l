@@ -91,3 +91,70 @@ class SpreadObject extends React.Component {
 }
 
 export default SpreadObject;
+
+// Explicación de spread:
+// Spread es una herramienta de JS que nos viene bien para usarla en React
+// Si tengo el objeto:
+const data = {
+  email: '',
+  name: '',
+  password: ''
+};
+// Y escribo ...data es como si en ese momento re-escribiese mi código a:
+// email = '';
+// name = '';
+// password = '';
+// Es decir, como si subo las propiedades de data un nivel hacia arriba.
+
+// Se entiende mejor con el siguiente ejemplo
+const data2 = {
+  user: {
+    email: '',
+    name: '',
+    password: ''
+  }
+};
+const data3 = {
+  ...data2.user
+};
+// Esto crea:
+// data3 = {
+//   email: '',
+//   name: '',
+//   password: ''
+// }
+// Es decir, es como si hubiese escrito a mano
+// const data3 = {
+//   email: user.email,
+//   name: user.name,
+//   password: user.password
+// };
+
+// Y ahora el ejemplo que nos interesa con React
+// this.state nos pide que pasemos un objeto de primer nivel, pero yo quiero cambiar el email que está en el segundo nivel.
+// Para conseguirlo tendría que hacer esto
+// this.setState({
+//   user: {
+//     email: newEmailValue,
+//     name: this.state.user.name,
+//     password: this.state.user.password
+//   }
+// })
+// Es decir, me veo obliga a escribir name: this.state.user.name y password: this.state.user.password. Me hace escribir de más
+// Sin embargo si uso
+// this.setState({
+//   user: {
+//     ...this.state.user,
+//     email: newEmailValue,
+//   }
+// })
+// Que JS me lo cambia a
+// this.setState({
+//   user: {
+//     email: this.state.user.email,
+//     name: this.state.user.name,
+//     password: this.state.user.password
+//     email: newEmailValue,
+//   }
+// })
+// Es decir JS me reescribe el código y así no tengo que hacerlo yo.

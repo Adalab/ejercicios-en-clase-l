@@ -24,11 +24,31 @@ class App extends React.Component {
 
   // este método solo nos vale para actualizar cualquier input
   // y su correspondiente propiedad del estado: name y password
-  handleInput(inputName, inputValue) {
-    // this.state siempre recibe un objeto
-    this.setState({
-      [inputName]: inputValue
-    });
+  // este método es reutilizable
+  handleInput(inputKey, inputValue) {
+    console.log(inputKey, inputValue);
+    // utilizar if / else no nos gusta porque tendríamos que poner tantos if como inputs quisiera gestionar
+    // if (inputKey === 'name') {
+    //   this.setState({
+    //     name: inputValue
+    //   });
+    // } else if (inputKey === 'password') {
+    //   this.setState({
+    //     password: inputValue
+    //   });
+    // }
+
+    // la sintaxis de js me permite guardar en una constante o variable un string y utilizar ese string como key o nombre de la propiedad que quiero modificar
+
+    // las siguientes dos líneas crean el objeto obj = { password: 'asdfasd' };
+    // const inputKey = 'password';
+    // const obj = { [inputKey]: 'asdfasd' };
+
+    // una vez que tengo el obj = { password: 'asdfasd' }; lo guardo en el estado con:
+    // this.setState(obj);
+
+    // todo lo anterior se resume en una sola línea con:
+    this.setState({ [inputKey]: inputValue });
   }
 
   render() {

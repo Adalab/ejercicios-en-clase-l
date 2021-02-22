@@ -15,6 +15,7 @@ class App extends React.Component {
     this.setState({
       email: ev.target.value
     });
+    // guardamos los datos en crudo, o sin modificar
   }
 
   render() {
@@ -37,7 +38,7 @@ class App extends React.Component {
         </form>
         <div className="border--medium display-inline-block">
           {/* así pintamos un campo del estado */}
-          <p>El email de la usuaria es: {this.state.email}</p>
+          <p>El email de la usuaria es: {this.state.email.toUpperCase()}</p>
         </div>
       </div>
     );
