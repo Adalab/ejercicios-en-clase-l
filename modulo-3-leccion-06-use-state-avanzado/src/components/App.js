@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Form from './Form';
 import Preview from './Preview';
 
-// aquí no hay this.forceUpdate
-// aquí no hay bind
-// aquí no hay prevState
+// esto no es un componente de clase, por ello:
+// - aquí no hay this.forceUpdate
+// - aquí no hay bind
+// - aquí no hay prevState
 
 const App = () => {
   const [email, setEmail] = useState('');
@@ -24,9 +25,9 @@ const App = () => {
 
   const handleReset = () => {
     console.log('Han pulsado en Reset');
-    setEmail();
-    setName();
-    setColor();
+    setEmail('');
+    setName('');
+    setColor('');
   };
 
   return (

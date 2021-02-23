@@ -15,6 +15,7 @@ const App = () => {
 
   const handleFav = ev => {
     // este código es el mismo que el de las series favoritas
+    // este código es JS puro y duro, no tiene nada que ver con React
     const showClickedId = ev.target.id;
     const favIndex = favs.findIndex(fav => fav.id === showClickedId);
     if (favIndex === -1) {
@@ -24,7 +25,8 @@ const App = () => {
       favs.splice(favIndex, 1);
     }
 
-    // esta es la única línea importante del ejercicio
+    // aquí volvemos a utilizar código de React
+    // esta es la única línea importante del ejercicio en lo que se refiere a useState con arrays
     // para guardar un array en el estado siempre debemos usar spread de esta forma
     setFavs([...favs]);
 
@@ -46,10 +48,10 @@ const App = () => {
 
   const renderFavs = () => {
     // pintar un listado
-    return favs.map(show => {
+    return favs.map(fav => {
       return (
-        <li className="show cursor-pointer" key={show.id} id={show.id} onClick={handleFav}>
-          {show.name}
+        <li className="show cursor-pointer" key={fav.id} id={fav.id} onClick={handleFav}>
+          {fav.name}
         </li>
       );
     });
