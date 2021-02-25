@@ -52,3 +52,4 @@ export default App;
 // ¿Qué pasa si no ponemos path?
 // ¿Para qué vale exact?
 // ¿La gestión de rutas debe estar siempre en el componente superior?
+// ¿Cómo puedo poner una página de no encontrada?
