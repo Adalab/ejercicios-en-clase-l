@@ -22,6 +22,9 @@ class App extends React.Component {
 
     this.handleFilterText = this.handleFilterText.bind(this);
     this.handleFilterLanguage = this.handleFilterLanguage.bind(this);
+    this.filterByText = this.filterByText.bind(this);
+    this.filterByLanguage = this.filterByLanguage.bind(this);
+    this.renderSerie = this.renderSerie.bind(this);
   }
 
   handleFilterText(ev) {
@@ -36,18 +39,27 @@ class App extends React.Component {
     });
   }
 
+  // tengo que hacer el bind de este método
+  filterByText(serie) {
+    return serie.show.name.toLowerCase().includes(this.state.filterText.toLowerCase());
+  }
+
+  // tengo que hacer el bind de este método
+  filterByLanguage(serie) {
+    return serie.show.language.toLowerCase().includes(this.state.filterLanguage.toLowerCase());
+  }
+
+  // tengo que hacer el bind de este método
+  renderSerie(serie) {
+    return <li key={serie.show.id}>Nombre: {serie.show.name}</li>;
+  }
+
   renderSeriesList() {
     // si quieres ver este método como si fuera un poema abre AppPoem.js
     return this.state.series
-      .filter(serie => {
-        return serie.show.name.toLowerCase().includes(this.state.filterText.toLowerCase());
-      })
-      .filter(serie => {
-        return serie.show.language.toLowerCase().includes(this.state.filterLanguage.toLowerCase());
-      })
-      .map(serie => {
-        return <li key={serie.show.id}>Nombre: {serie.show.name}</li>;
-      });
+      .filter(this.filterByText)
+      .filter(this.filterByLanguage)
+      .map(this.renderSerie);
   }
 
   render() {
