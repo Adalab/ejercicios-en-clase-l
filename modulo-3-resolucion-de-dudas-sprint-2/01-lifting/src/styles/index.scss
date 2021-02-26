@@ -1,0 +1,28 @@
+:root {
+  --background: #1e1e1e;
+  --blue: #14d9c4;
+  --darkblue: #099d8d;
+  --orange: #d96314;
+  --almostwhite: #aeaeae;
+  --monospace: 'Inconsolata', monospace;
+}
+
+* {
+  color: #d1d1d1;
+  font-family: 'Rubik', 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  padding: 20px;
+  background-color: var(--background);
+}
+
+pre,.monospaced {
+  font-family: var(--monospace);  
+}
+
+main {
+  padding: 20px;
+  color: #ddd;
+}
