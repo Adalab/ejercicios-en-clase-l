@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+
+  &__title {
+    font-size: 28px;
+    color: var(--blue);
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    color: var(--orange);
+    padding-left: 40px;
+  }
+
+  &__underline {
+    width: 50vw;
+    margin-bottom: 2em;
+    border-bottom: dotted 1px var(--darkblue);
+    @media all and (max-width: 996px) {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__lifecycle {
+    position: absolute;
+    right: 50px;
+    top: -7px;
+    width: 40px;
+  }
+}
