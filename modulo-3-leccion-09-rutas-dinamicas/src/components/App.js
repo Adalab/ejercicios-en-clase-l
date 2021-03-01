@@ -47,7 +47,7 @@ const App = () => {
 
         <Route path="/product/:productId" render={renderProductoDetail} />
 
-        <Route path="/home">
+        <Route path="/" exact>
           {/* aquí puedo poner todo el código JSX que quiera */}
           <Home />
         </Route>

@@ -9,7 +9,7 @@ const Home = () => {
         Menu:
         <ul className="display-inline-block pl-1">
           <li className="nav__item ">
-            <Link className="nav__link" to="/home">
+            <Link className="nav__link" to="/">
               Ir al inicio
             </Link>
           </li>

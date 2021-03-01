@@ -5,6 +5,7 @@ import AboutUs from './AboutUs';
 import Contact from './Contact';
 import Home1 from './Home-1';
 import Home2 from './Home-2';
+import PageNotFound from './PageNotFound';
 
 const App = () => {
   return (
@@ -12,10 +13,10 @@ const App = () => {
       <Header />
       <div className="border--medium">
         <h2>Router sin switch</h2>
-        <Route path="/home">
+        <Route path="/" exact>
           <Home1 />
         </Route>
-        <Route path="/home">
+        <Route path="/" exact>
           <Home2 />
         </Route>
         <Route path="/about-us">
@@ -24,15 +25,21 @@ const App = () => {
         <Route path="/contact">
           <Contact />
         </Route>
+        {/* Si no hay switch no tiene sentido renderizar PageNotFound porque nos aparecería siempre
+
+        <Route>
+          <PageNotFound />
+        </Route> */}
       </div>
 
       <div className="border--medium">
         <h2>Router con switch</h2>
         <Switch>
-          <Route path="/home">
+          <Route path="/" exact>
             <Home1 />
           </Route>
-          <Route path="/home">
+          <Route path="/" exact>
+            {/* ahora mismo nunca se pintaría */}
             <Home2 />
           </Route>
           <Route path="/about-us">
@@ -40,6 +47,9 @@ const App = () => {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route>
+            <PageNotFound />
           </Route>
         </Switch>
       </div>
