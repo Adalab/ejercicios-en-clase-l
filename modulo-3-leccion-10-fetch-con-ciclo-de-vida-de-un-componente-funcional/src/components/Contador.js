@@ -6,6 +6,15 @@ import React, { useState, useEffect } from 'react';
 const Counter = props => {
   const [counter, setCounter] = useState(0);
 
+  // function useEffect() {
+  //   console.log('Se ejecuta el montaje en la función principal del useEffect, en todos los render');
+  //   return function () {
+  //     console.log(
+  //       'Se ejecuta el desmontaje en la función retornada del useEffect, en todos los render'
+  //     );
+  //   };
+  // }
+
   useEffect(() => {
     console.log('Se ejecuta el montaje en la función principal del useEffect, en todos los render');
     return () => {

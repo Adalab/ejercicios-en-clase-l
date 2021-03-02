@@ -66,7 +66,7 @@ class Series extends React.Component {
     console.log('Se ejecuta el render()');
     return (
       <div className="border--medium">
-        <h2>Componente Series</h2>
+        <h2>Componente Series (con fetch)</h2>
         <form>
           <label>Busca una serie</label>
           <input
