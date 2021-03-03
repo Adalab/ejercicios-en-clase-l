@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = props => {
+const ProductDetail = props => {
   return (
     <section className="border--medium">
       <h2>Detalle de producto</h2>
@@ -19,4 +19,4 @@ const Home = props => {
   );
 };
 
-export default Home;
+export default ProductDetail;
