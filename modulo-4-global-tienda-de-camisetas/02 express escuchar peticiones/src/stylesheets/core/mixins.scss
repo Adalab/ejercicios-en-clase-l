@@ -1,0 +1,22 @@
+@mixin background() {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #eee;
+}
+
+@mixin btn() {
+  cursor: pointer;
+  padding: 0.35rem 0.8rem;
+  background-color: $colorPrimary;
+  border: none;
+  border-radius: 0.3rem;
+  vertical-align: middle;
+  font-size: 0.8rem;
+  color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $colorPrimaryHover;
+    border-color: $colorPrimary;
+  }
+}
