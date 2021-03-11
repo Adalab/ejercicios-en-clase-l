@@ -10,4 +10,4 @@ npm install
 npm start
 ```
 
-Open http://localhost:3001
+Abrir http://localhost:3001
