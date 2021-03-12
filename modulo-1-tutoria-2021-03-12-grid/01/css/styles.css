@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  /* width: 300px; */
+  border: 1px solid red;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 40px 80px;
+  grid-auto-rows: 100px;
+}
+
+.item {
+  border: 1px solid green;
+}
+
+.item-3 {
+  grid-column: span 2;
+}
+
+.item-8 {
+  grid-column: 2 / 4;
+}
+
+@media all and (min-width: 800px) {
+  .item-1 {
+    grid-column: span 2;
+  }
+}

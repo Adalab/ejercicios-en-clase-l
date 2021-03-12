@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 40px 40px 40px; */
+}
+.item {
+  border: 1px solid green;
+}
+
+/*
+.item-1 {
+  grid-column: span 2;
+}
+
+.item-2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item-3 {
+  grid-row: span 2;
+}
+
+.item-6 {
+  grid-column: span 2;
+} */
+
+.list {
+  display: flex;
+}
+
+.item-2 {
+  display: flex;
+  justify-content: space-between;
+}
