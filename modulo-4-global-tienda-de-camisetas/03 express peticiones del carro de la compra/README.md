@@ -17,12 +17,12 @@ Abrir http://localhost:3001
 ## Para arrancar el servidor:
 
 ```bash
-cd web
+cd server
 npm install
 ```
 
 ```bash
-cd web
+cd server
 npm start
 ```
 
