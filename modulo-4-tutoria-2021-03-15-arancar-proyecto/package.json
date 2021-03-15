@@ -1,0 +1,14 @@
+{
+  "name": "modulo-4-tutoria-2021-03-15-arancar-proyecto",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
