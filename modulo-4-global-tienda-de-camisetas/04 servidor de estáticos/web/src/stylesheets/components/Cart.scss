@@ -1,0 +1,72 @@
+.cart {
+  @include background();
+
+  &__table {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .table__header {
+    background: $colorPrimary;
+    color: white;
+
+    .table__item {
+      &--product,
+      &--price,
+      &--units,
+      &--total {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.9rem;
+        color: white;
+      }
+      &--total {
+        text-align: right;
+      }
+    }
+  }
+
+  .table__body {
+    .table__item {
+      &--product,
+      &--price,
+      &--units,
+      &--total {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+      }
+      &--product {
+        display: flex;
+        align-items: center;
+      }
+      &--product-img {
+        margin-right: 0.5rem;
+        height: 2rem;
+      }
+      &--units-value {
+        display: inline-block;
+        padding: 0 0.4rem 0 0.2rem;
+      }
+      &--total {
+        text-align: right;
+      }
+    }
+  }
+
+  .table__footer {
+    .table__item {
+      &--total-name,
+      &--total-value {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+        text-align: right;
+      }
+    }
+  }
+
+  .table__btn {
+    @include btn();
+    margin-right: 0.2rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+}
