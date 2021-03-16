@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Esta página se está sirviendo en http://localhost:3000/billing.html -->
+    <!-- Estas rutas son relativas al servidor de estáticos ./server/public -->
+    <!-- Renombra la carpeta ./public-basico a ./public para que este link de estilos exista y funcione -->
+    <link rel="stylesheet" href="./stylesheets/main.css" />
+    <title>Factura de la tienda de camisetas</title>
+  </head>
+  <body>
+    <h1>Facturación de la tienda de camisetas</h1>
+
+    <h3>Tu email es:</h3>
+    <!-- Con esta sintaxis puedo coger los datos que me pasan al renderizar este fichero -->
+    <p><%= userEmail %></p>
+
+    <h3>Estos son los productos que tienes ahora mismo en tu carro de la compra:</h3>
+    <ul>
+      <li>El listado de productos irá aquí:</li>
+    </ul>
+
+    <h3>El total de tu carro es:</h3>
+    <!-- Con esta sintaxis puedo coger los datos que me pasan al renderizar este fichero -->
+    <p><%= cartTotal %> €.</p>
+
+    <!-- También podemos hacer if y for -->
+  </body>
+</html>
