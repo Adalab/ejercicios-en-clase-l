@@ -1,5 +1,12 @@
+const isDevEnviroment = process.env.NODE_ENV === 'development';
+const apiUrl = isDevEnviroment ? '//localhost:3000' : '';
+
+console.log('isDevEnviroment', isDevEnviroment);
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+console.log('apiUrl', apiUrl);
+
 const sendLogin = userData => {
-  return fetch('http://localhost:3000/api/user/login', {
+  return fetch(`${apiUrl}/api/user/login`, {
     method: 'POST',
     body: JSON.stringify(userData),
     headers: { 'Content-Type': 'application/json' }
@@ -12,7 +19,7 @@ const sendLogin = userData => {
 
 const sendSignUp = userData => {
   console.log(userData);
-  return fetch('http://localhost:3000/api/user/signup', {
+  return fetch(`${apiUrl}/api/user/signup`, {
     method: 'POST',
     body: JSON.stringify(userData),
     headers: { 'Content-Type': 'application/json' }
@@ -24,7 +31,7 @@ const sendSignUp = userData => {
 };
 
 const getCartProducts = userId => {
-  return fetch(`http://localhost:3000/api/user/${userId}/cart`)
+  return fetch(`${apiUrl}/api/user/${userId}/cart`)
     .then(response => response.json())
     .then(data => {
       return data;
@@ -32,7 +39,7 @@ const getCartProducts = userId => {
 };
 
 const sendCartProducts = (userId, userCartProducts) => {
-  return fetch(`http://localhost:3000/api/user/${userId}/cart`, {
+  return fetch(`${apiUrl}/api/user/${userId}/cart`, {
     method: 'PUT',
     body: JSON.stringify(userCartProducts),
     headers: { 'Content-Type': 'application/json' }
@@ -44,7 +51,7 @@ const sendCartProducts = (userId, userCartProducts) => {
 };
 
 const getShopProducts = orderByPrice => {
-  return fetch('http://localhost:3000/api/products?orderByPrice=' + orderByPrice)
+  return fetch(`${apiUrl}/api/products?orderByPrice=${orderByPrice}`)
     .then(response => response.json())
     .then(data => {
       return data;
