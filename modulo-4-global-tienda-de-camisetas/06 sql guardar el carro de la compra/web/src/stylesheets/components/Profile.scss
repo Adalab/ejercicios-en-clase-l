@@ -1,0 +1,13 @@
+.profile {
+  @include background();
+  display: flex;
+  align-items: center;
+
+  &__title {
+    padding-right: 0.5rem;
+  }
+
+  &__btn {
+    @include btn();
+  }
+}
