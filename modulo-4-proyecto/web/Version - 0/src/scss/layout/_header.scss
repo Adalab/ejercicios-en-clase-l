@@ -1,0 +1,11 @@
+.header {
+  height: 111px;
+  width: 100%;
+  padding: 30px 0px;
+  background-color: $color-background;
+  &__logo {
+    height: 50px;
+    width: auto;
+    margin: 0 0 0 40px;
+  }
+}

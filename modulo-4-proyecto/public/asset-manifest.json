@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "./static/css/main.df1a0a46.chunk.css",
+    "main.js": "./static/js/main.2faa0bfb.chunk.js",
+    "main.js.map": "./static/js/main.2faa0bfb.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.03c63fd0.js",
+    "runtime-main.js.map": "./static/js/runtime-main.03c63fd0.js.map",
+    "static/js/2.f1d3a3f1.chunk.js": "./static/js/2.f1d3a3f1.chunk.js",
+    "static/js/2.f1d3a3f1.chunk.js.map": "./static/js/2.f1d3a3f1.chunk.js.map",
+    "static/js/3.efcccbd3.chunk.js": "./static/js/3.efcccbd3.chunk.js",
+    "static/js/3.efcccbd3.chunk.js.map": "./static/js/3.efcccbd3.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.df1a0a46.chunk.css.map": "./static/css/main.df1a0a46.chunk.css.map",
+    "static/js/2.f1d3a3f1.chunk.js.LICENSE.txt": "./static/js/2.f1d3a3f1.chunk.js.LICENSE.txt",
+    "static/media/25.666e89b0.svg": "./static/media/25.666e89b0.svg",
+    "static/media/_main.scss": "./static/media/twittersvg.5058ccda.svg",
+    "static/media/awesome-1.e45427b8.svg": "./static/media/awesome-1.e45427b8.svg",
+    "static/media/design.e0c9986d.svg": "./static/media/design.e0c9986d.svg",
+    "static/media/keyboard.0a944739.svg": "./static/media/keyboard.0a944739.svg",
+    "static/media/logo-surrender.3b4f8163.png": "./static/media/logo-surrender.3b4f8163.png",
+    "static/media/pin-dark-hair.619fb196.png": "./static/media/pin-dark-hair.619fb196.png",
+    "static/media/pin-glasses.9f416fb8.png": "./static/media/pin-glasses.9f416fb8.png",
+    "static/media/pin-lights.8900819d.png": "./static/media/pin-lights.8900819d.png",
+    "static/media/pin-long-brown-hair.a0a4dcde.png": "./static/media/pin-long-brown-hair.a0a4dcde.png",
+    "static/media/pin-long-hair.01793d08.png": "./static/media/pin-long-hair.01793d08.png",
+    "static/media/share.224f4a5e.svg": "./static/media/share.224f4a5e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03c63fd0.js",
+    "static/js/2.f1d3a3f1.chunk.js",
+    "static/css/main.df1a0a46.chunk.css",
+    "static/js/main.2faa0bfb.chunk.js"
+  ]
+}

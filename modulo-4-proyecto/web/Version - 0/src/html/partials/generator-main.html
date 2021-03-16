@@ -1,0 +1,162 @@
+<main class="gen-main">
+  <section class="gen-main__container">
+    <div class="gen-main__container-inner">
+      <button class="btn gen-main__btn--reset js-reset">Reset</button>
+      <div class="gen-main__card">
+        <h2 class="card__name-surname js-nameSurname">Nombre Apellido</h2>
+        <h2 class="card__occupation js-occupation">Front-end developer</h2>
+        <div class="card__photo js-image js__profile-image">
+          <div class="js-div">
+            <img
+              class="card__img-1"
+              src="./assets/images/pin-long-brown-hair.png"
+              alt="Card Photo"
+              title="Imagen por defecto"
+            />
+            <img
+              class="card__img-2"
+              src="./assets/images/pin-glasses.png"
+              alt="Card Photo"
+              title="Imagen por defecto"
+            />
+            <img
+              class="card__img-3"
+              src="./assets/images/pin-dark-hair.png"
+              alt="Card Photo"
+              title="Imagen por defecto"
+            />
+            <img
+              class="card__img-4"
+              src="./assets/images/pin-lights.png"
+              alt="Card Photo"
+              title="Imagen por defecto"
+            />
+            <img
+              class="card__img-5"
+              src="./assets/images/pin-long-hair.png"
+              alt="Card Photo"
+              title="Imagen por defecto"
+            />
+          </div>
+        </div>
+        <nav class="card__contact">
+          <div class="card__contact-container">
+            <a
+              class="card__contact-call js-icons js-phone"
+              href=""
+              target="_blank"
+              alt="Call me"
+              title="Enlace al número de teléfono"
+              ><i class="fa fa-mobile fa-2x" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="card__contact-container">
+            <a
+              class="card__contact-email js-icons js-email"
+              href=""
+              target="_blank"
+              alt="Email me"
+              title="Enlace al e-mail"
+              ><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="card__contact-container">
+            <a
+              class="card__contact-linkedin js-icons js-linkedin"
+              href=""
+              target="_blank"
+              alt="Find me on linkedIn"
+              title="Enlace a Linkedin"
+              ><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="card__contact-container">
+            <a
+              class="card__contact-github js-icons js-github"
+              href=""
+              target="_blank"
+              alt="I'm on GitHub!"
+              title="Enlace a Github"
+              ><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!--DESIGN-->
+
+  <nav class="gen-main__customize">
+    <section class="gen-main__customize-design">
+      <div class="customize-design__container js-collapsable" tabindex="2">
+        <img
+          class="customize-design__container-logo"
+          src="./assets/images/design.svg"
+          alt="Share logo"
+        />
+        <h2 class="customize-design__container-title">Diseña</h2>
+        <button class="customize-design__container-btn js-arrow"></button>
+      </div>
+
+      <form
+        class="customize-design__colors js__hidden js-section"
+        action=""
+        method="GET"
+      >
+        <h2 class="customize-design__colors-title">Colores</h2>
+        <label
+          class="customize-design__colors1 js-customize-design__colors"
+          for="colors1"
+          id="customize-design__colors1"
+        >
+          <input
+            class="customize-design__colors1-selection js-customize-design__colors1-selection"
+            type="radio"
+            id="colors1"
+            value="greenpalette"
+            name="colors"
+          />
+
+          <div class="customize-design__colors1-boxes1"></div>
+          <div class="customize-design__colors1-boxes2"></div>
+          <div class="customize-design__colors1-boxes3"></div>
+        </label>
+        <label
+          class="customize-design__colors2 js-customize-design__colors"
+          for="colors2"
+          id="customize-design__colors2"
+        >
+          <input
+            class="customize-design__colors2-selection js-customize-design__colors1-selection"
+            type="radio"
+            id="colors2"
+            value="orangepalette"
+            name="colors"
+          />
+          <div class="customize-design__colors2-boxes1"></div>
+          <div class="customize-design__colors2-boxes2"></div>
+          <div class="customize-design__colors2-boxes3"></div>
+        </label>
+        <label
+          class="customize-design__colors3 js-customize-design__colors"
+          for="colors3"
+          id="customize-design__colors3"
+        >
+          <input
+            class="customize-design__colors3-selection js-customize-design__colors1-selection"
+            type="radio"
+            id="colors3"
+            value="bluepalette"
+            name="colors"
+          />
+          <div class="customize-design__colors3-boxes1"></div>
+          <div class="customize-design__colors3-boxes2"></div>
+          <div class="customize-design__colors3-boxes3"></div>
+        </label>
+      </form>
+    </section>
+    <include src="./form.html"></include>
+    <include src="./share.html"></include>
+  </nav>
+</main>

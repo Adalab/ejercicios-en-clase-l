@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  height: 110px;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 0 20px 0;
+  background-color: $color-background;
+  @include tablet {
+    height: 60px;
+    flex-direction: row;
+    padding: 10px 40px 10px 40px;
+    justify-content: space-between;
+  }
+  &__small {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    opacity: 0.5;
+    padding: 0 0 12px 0;
+    font-family: $fontFamily-text;
+    color: $color-background-light;
+  }
+  &__logo {
+    width: 103px;
+    display: block;
+    @include tablet {
+      margin: 0px;
+    }
+  }
+}

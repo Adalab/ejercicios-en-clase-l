@@ -1,0 +1,130 @@
+body {
+  height: 100vh;
+}
+
+.main__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $color-background;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  height: auto;
+  background-color: $color-background;
+  @include tablet {
+    margin-bottom: 60px;
+  }
+  &__logo {
+    width: 300px;
+    justify-self: center;
+    padding: 0 0 37.5px 0;
+    @include tablet {
+      width: 619px;
+      padding: 0 0 31px 0;
+    }
+  }
+  &__title {
+    font-family: $fontFamily-title;
+    color: $color-background-medium-light-extra;
+    font-size: 19.2px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    font-family: $fontFamily-text;
+    color: $color-background-medium-light;
+    width: 300px;
+    font-size: 12.8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    padding: 0 28px 18px 28px;
+    @include tablet {
+      width: 400px;
+      justify-self: center;
+      font-size: 16px;
+    }
+  }
+  &__benefits {
+    display: flex;
+    border-radius: 4px;
+    border: solid 1.6px $color-background-medium-light;
+    width: 268px;
+    height: 74px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+    @include tablet {
+      width: 325px;
+    }
+    &-item {
+      width: 60px;
+      height: 48.8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include tablet {
+      }
+    }
+    &-itemimg {
+      width: 32px;
+    }
+    &-itemimg2 {
+      width: 25px;
+    }
+    &-itemtitle {
+      font-family: $fontFamily-text;
+      color: $color-background-medium-light;
+      font-size: 12.8px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
+  }
+  &__button {
+    text-decoration: none;
+    width: 129px;
+    height: 42px;
+    background-color: $color-background-medium;
+    border-radius: 21px;
+    border: 0px;
+    font-family: $fontFamily-text;
+    color: $color-background-medium-light-extra;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 42px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-justify: center;
+    text-align: center;
+  }
+}
+
+.false-footer {
+  height: 60px;
+  background-color: $color-background;
+}

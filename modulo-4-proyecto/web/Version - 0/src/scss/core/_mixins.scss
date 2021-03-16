@@ -1,0 +1,33 @@
+@mixin tablet {
+  @media all and (min-width: $tablet-min) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media all and (min-width: $desktop-min) {
+    @content;
+  }
+}
+
+@mixin image-carrousel {
+  img {
+    animation-name: fade-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+  }
+  img:nth-of-type(1) {
+    animation-delay: 20s;
+  }
+  img:nth-of-type(2) {
+    animation-delay: 15s;
+  }
+  img:nth-of-type(3) {
+    animation-delay: 10s;
+  }
+  img:nth-of-type(4) {
+    animation-delay: 5s;
+  }
+  img:nth-of-type(5) {
+    animation-delay: 0s;
+  }
+}
