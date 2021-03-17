@@ -209,11 +209,20 @@ app.set('view engine', 'ejs');
 
 // Con este enpoint gestiono las peticiones GET a http://localhost:3000/billing.html
 app.get('/billing.html', (req, res) => {
+  // Obtengo la URL donde se está ejecutando este servidor a través de la variable de entorno NODE_ENV
+  // Ver el package.json de este servidor > scripts > dev > NODE_ENV
+  const isDevelopmentEnv = process.env.NODE_ENV === 'development';
+  const serverURL = isDevelopmentEnv
+    ? `http://localhost:${serverPort}`
+    : 'https://tshirt-eshop-adalab.herokuapp.com';
+  // Esto lo hago para que sepas cómo utilizar las variables de entorno
+
   // Tengo que pasar datos a la view billing
   // De dónde obtengo estos datos(base de datos, un JSON...) es otro problema
   const templateData = {
     userEmail: 'rita@gmail.com',
-    cartTotal: 10
+    cartTotal: 10,
+    serverURL: serverURL
   };
   // En lo que se refiere a motor de plantillas lo importante es pasar un objeto con los datos que la plantilla debe usar
   res.render('billing', templateData);
