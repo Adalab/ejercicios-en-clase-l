@@ -1,5 +1,5 @@
-const isDevEnviroment = process.env.NODE_ENV === 'development';
-const apiUrl = isDevEnviroment ? '//localhost:3000' : '';
+const isDevEnviroment = process.env.NODE_ENV === 'development'; // Booleano
+const apiUrl = isDevEnviroment ? 'http://localhost:3000' : '';
 
 console.log('isDevEnviroment', isDevEnviroment);
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
@@ -18,7 +18,6 @@ const sendLogin = userData => {
 };
 
 const sendSignUp = userData => {
-  console.log(userData);
   return fetch(`${apiUrl}/api/user/signup`, {
     method: 'POST',
     body: JSON.stringify(userData),

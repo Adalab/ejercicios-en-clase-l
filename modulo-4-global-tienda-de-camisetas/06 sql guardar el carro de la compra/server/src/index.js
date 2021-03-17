@@ -3,7 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const Database = require('better-sqlite3');
 
-const cartData = require('./data/cart.json');
+// const cartData = require('./data/cart.json');
 // const productsData = require('./data/products.json');
 // const usersData = require('./data/users.json');
 
@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cors());
 
 // Inicio la aplicación de express
-const serverPort = 3000;
+const serverPort = process.env.PORT || 3000;
 app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
@@ -34,10 +34,10 @@ app.get('/api/products', (req, res) => {
   let query;
   if (req.query.orderByPrice === 'desc') {
     // Preparo la query
-    query = db.prepare(`SELECT * FROM products ORDER BY price DESC`);
+    query = db.prepare('SELECT * FROM products ORDER BY price DESC');
   } else {
     // Preparo la query
-    query = db.prepare(`SELECT * FROM products ORDER BY price ASC`);
+    query = db.prepare('SELECT * FROM products ORDER BY price ASC');
   }
   // Ejecutamos la query, como quiero muchos registros uso query.all()
   const products = query.all();
@@ -56,7 +56,7 @@ app.get('/api/products', (req, res) => {
 
 app.post('/api/user/login', (req, res) => {
   // Preparo la query
-  const query = db.prepare(`SELECT * FROM users WHERE email = ? AND password = ?`);
+  const query = db.prepare('SELECT * FROM users WHERE email = ? AND password = ?');
   // Ejecuto la query
   const userFound = query.get(req.body.email, req.body.password);
 
@@ -104,7 +104,7 @@ app.post('/api/user/signup', (req, res) => {
     });
   } else {
     // Si todas las comprobaciones anteriores han ido bien busco a la usuaria en la base de datos
-    const queryUserFound = db.prepare(`SELECT * FROM users  WHERE email = ?`);
+    const queryUserFound = db.prepare('SELECT * FROM users  WHERE email = ?');
     const userFound = queryUserFound.get(req.body.email);
     if (userFound !== undefined) {
       // Si la usuaria existe respondo con un error
@@ -114,7 +114,7 @@ app.post('/api/user/signup', (req, res) => {
       });
     } else {
       // Si la usuaria no existe la creo en la tabla de users
-      const queryCreateUser = db.prepare(`INSERT INTO users (email, password) VALUES (?, ?)`);
+      const queryCreateUser = db.prepare('INSERT INTO users (email, password) VALUES (?, ?)');
       const createdUser = queryCreateUser.run(req.body.email, req.body.password);
       // Y respondo devolviendo el id del nuevo registro creado
       res.json({
@@ -126,42 +126,80 @@ app.post('/api/user/signup', (req, res) => {
 });
 
 app.get('/api/user/:userId/cart', (req, res) => {
+  // Cojo el userId de las URL params
+  const cartUserId = req.params.userId;
+  // Busco en base de datos los products de este usuario
+  const query = db.prepare('SELECT productId, productUnits FROM userCartProducts WHERE userId = ?');
+  const userCartProducts = query.all(cartUserId);
+
+  // Si te fijas en el fichero cart.json el id de los productos eran de tipo un string
+  // En cambio, los ids que nos devuelve la base de datos son enteros
+  // Si quiero que la web siga funcionando y reciba los mismos datos que antes de haber usado la base de datos
+  // debo convertir los ids de los productos a un string antes de devolverlos al front
+  for (const userCartProduct of userCartProducts) {
+    userCartProduct.productId = String(userCartProduct.productId); // Este String() es igual que parseInt pero devuelve un string
+  }
+
+  // Si no hay productos query.all me devuelve un array vacío, si sí los hay un array relleno
+  res.json(userCartProducts);
+
   // Para ver qué pinta tienen estos datos abrir cart.json
 
-  // Cojo el userId de URL params
-  const cartUserId = req.params.userId;
-  // Busco en los carros de todos las usuarias su carro de la compra
-  const userCartFound = cartData.find(cartUser => cartUser.userId === cartUserId);
-  if (userCartFound) {
-    // Si la usuaria tiene un carro, devuelvo sus productos
-    res.json(userCartFound.products);
-  } else {
-    // Si la usuaria no tiene un carro, devuelvo un listado de productos vacío
-    res.json([]);
-  }
+  // // Cojo el userId de URL params
+  // const cartUserId = req.params.userId;
+  // // Busco en los carros de todos las usuarias su carro de la compra
+  // const userCartFound = cartData.find(cartUser => cartUser.userId === cartUserId);
+  // if (userCartFound) {
+  //   // Si la usuaria tiene un carro, devuelvo sus productos
+  //   res.json(userCartFound.products);
+  // } else {
+  //   // Si la usuaria no tiene un carro, devuelvo un listado de productos vacío
+  //   res.json([]);
+  // }
 });
 
 app.put('/api/user/:userId/cart', (req, res) => {
-  // Para ver qué pinta tienen estos datos abrir cart.json
-
-  // Cogo el carro de la usuaria del body de la petición
-  const userCartProducts = req.body;
-  // Cojo el userId de URL params
+  // Cojo el userId de las URL params
   const cartUserId = req.params.userId;
-  // Busco en los carros de todos las usuarias su carro de la compra
-  const userCartFound = cartData.find(cartUser => cartUser.userId === cartUserId);
-  if (userCartFound) {
-    // Si la usuaria tiene un carro, sobre escribo sus productos
-    userCartFound.products = userCartProducts;
-  } else {
-    // Si la usuaria no tiene un carro, lo creo y lo añado al listado de carros de todas las usuarias
-    cartData.push({
-      userId: cartUserId,
-      products: userCartProducts
-    });
+
+  // Desde front me están pasando todos los productos que hay ahora mismo en el carro,
+  // así que borro todos los productos antiguos
+  const deleteQuery = db.prepare('DELETE FROM userCartProducts WHERE userId = ?');
+  deleteQuery.run(cartUserId);
+
+  // y añado todos los productos nuevos
+  const userCartProducts = req.body;
+  const insertQuery = db.prepare(
+    'INSERT INTO userCartProducts (userId, productId, productUnits) VALUES (?, ?, ?)'
+  );
+  for (const userCartProduct of userCartProducts) {
+    // Inserto los productos uno a uno
+    insertQuery.run(cartUserId, userCartProduct.productId, userCartProduct.productUnits);
   }
+
   // Respondo con el carro de esta usuaria
   res.json(userCartProducts);
+
+  // // Para ver qué pinta tienen estos datos abrir cart.json
+
+  // // Cogo el carro de la usuaria del body de la petición
+  // const userCartProducts = req.body;
+  // // Cojo el userId de URL params
+  // const cartUserId = req.params.userId;
+  // // Busco en los carros de todos las usuarias su carro de la compra
+  // const userCartFound = cartData.find(cartUser => cartUser.userId === cartUserId);
+  // if (userCartFound) {
+  //   // Si la usuaria tiene un carro, sobre escribo sus productos
+  //   userCartFound.products = userCartProducts;
+  // } else {
+  //   // Si la usuaria no tiene un carro, lo creo y lo añado al listado de carros de todas las usuarias
+  //   cartData.push({
+  //     userId: cartUserId,
+  //     products: userCartProducts
+  //   });
+  // }
+  // // Respondo con el carro de esta usuaria
+  // res.json(userCartProducts);
 });
 
 // MOTOR DE PLANTILLAS
