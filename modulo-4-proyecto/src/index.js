@@ -58,8 +58,6 @@ server.get("/card/:id", (req, res) => {
   const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
   const data = query.get(req.params.id);
 
-  console.log(data);
-
   res.render("pages/card", data);
 });
 
@@ -69,8 +67,6 @@ server.get("/card/:id", (req, res) => {
 // Sends a json object with the result.
 
 server.post("/card", (req, res) => {
-  console.log(req.body);
-
   const response = {};
 
   if (!req.body.name) {
@@ -89,8 +85,27 @@ server.post("/card", (req, res) => {
     // All is fine
     // Save to db
 
-    response.success = true;
-    response.cardURL = "https://TODO-HA-IDO-BIEN.com";
+    try {
+      const stmt = db.prepare('INSERT INTO cards (name, job, photo, phone, email, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)');
+      const result = stmt.run(req.body.name, req.body.job, req.body.photo, req.body.phone, req.body.email, req.body.linkedin, req.body.github, req.body.palette);
+
+      response.success = true;
+
+      if( req.host === 'localhost' ) {
+        response.cardURL = "http://localhost:3000/card/"+result.lastInsertRowid;
+      }
+      else {
+        response.cardURL = "https://awesome-profile-card-profes.herokuapp.com/card/"+result.lastInsertRowid;
+      }
+    }
+    catch( dbError ) {
+      // There was an error inserting into db
+      console.log("DB Error: ", dbError);
+
+      response.success = false;
+      response.error = "Error while saving data.";
+    }
+    
   }
 
   res.json(response);
