@@ -1,0 +1,56 @@
+[
+  {
+    "labelText": "Nombre completo",
+    "htmlFor": "fullName",
+    "className": "js-input-name",
+    "placeholder": "Ej: Sally Jill",
+    "type": "text",
+    "id": "fullName",
+    "name": "name"
+  },
+  {
+    "labelText": "Puesto",
+    "htmlFor": "position",
+    "className": "js-input-job",
+    "placeholder": "Ej: Front end",
+    "type": "text",
+    "id": "position",
+    "name": "job"
+  },
+  {
+    "labelText": "Email",
+    "htmlFor": "email",
+    "className": "js-input-email",
+    "placeholder": "Ej: sally.hill@gmail.com",
+    "type": "email",
+    "id": "email",
+    "name": "email"
+  },
+  {
+    "labelText": "Teléfono",
+    "htmlFor": "telephone",
+    "className": "js-input-phone",
+    "placeholder": "Ej: 555-555-555",
+    "type": "tel",
+    "id": "telephone",
+    "name": "phone"
+  },
+  {
+    "labelText": "LinkedIn",
+    "htmlFor": "linkedin",
+    "className": "js-input-linkedin",
+    "placeholder": "Ej: linkedin.com/in/sally-hill",
+    "type": "text",
+    "id": "linkedin",
+    "name": "linkedin"
+  },
+  {
+    "labelText": "GitHub",
+    "htmlFor": "github",
+    "className": "js-input-github",
+    "placeholder": "Ej: @sally-hill",
+    "type": "text",
+    "id": "github",
+    "name": "github"
+  }
+]
